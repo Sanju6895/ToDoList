@@ -32,7 +32,8 @@
         <div class="task-title">
             {% if task.complete %}
             <div class="task-complete-icon"></div>
-            <i><s><a href="{% url 'task-update' task.id %}">{{task}}</a></s></i> {% else %}
+            <i><s><a href="{% url 'task-update' task.id %}">{{task}}</a></s></i> 
+            {% else %}
             <div class="task-incomplete-icon"></div>
             <a href="{% url 'task-update' task.id %}">{{task}}</a> 
             {% endif %}
@@ -43,9 +44,13 @@
     </div>
 
     {% empty %}
-    <div style="text-align: center; padding-bottom: 10px; line-height: 1em;">
+    <!-- <div style="text-align: center; padding-bottom: 10px; line-height: 1em;">
         <h3>No new tasks are created.</h3>
         <h3>Create a <a style="text-decoration: none; color: #e53935;" href="{% url 'task-create' %}">New task</a> ! </h3>
+    </div> -->
+    <!-- <h1>No Items in the list</h1> -->
+    <div style="text-align: center; padding-bottom: 10px; line-height: 1em;">
+        <h3>No such task</h3>
     </div>
     {% endfor %}
 </div>

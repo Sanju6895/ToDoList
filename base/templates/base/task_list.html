@@ -44,13 +44,9 @@
     </div>
 
     {% empty %}
-    <!-- <div style="text-align: center; padding-bottom: 10px; line-height: 1em;">
-        <h3>No new tasks are created.</h3>
-        <h3>Create a <a style="text-decoration: none; color: #e53935;" href="{% url 'task-create' %}">New task</a> ! </h3>
-    </div> -->
-    <!-- <h1>No Items in the list</h1> -->
     <div style="text-align: center; padding-bottom: 10px; line-height: 1em;">
-        <h3>No such task</h3>
+        <h3>Welcome {{request.user}}</h3>
+        <h3>Lets create task<a style="text-decoration: none; color: #424e55;" href="{% url 'task-create' %}"> click here</a></h3>
     </div>
     {% endfor %}
 </div>
